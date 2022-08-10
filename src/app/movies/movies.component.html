@@ -1,0 +1,29 @@
+
+<div class="p-3">
+    <input [(ngModel)]="term" type="text" class="form-control bg-transparent text-light" placeholder="search by name...">
+</div>
+<div class="row py-5 justify-content-center">
+    <!-- <div class="beforeAfter col-md-4 movieTitle d-flex align-items-center">
+        <h2 >Trending <br> Movies <br> to watch now</h2>
+    </div> -->
+    <div *ngFor="let movie of trendingMovies|search:term" class="col-md-2">
+        <a [routerLink]="['/movieDetails',movie.id]" class="a-none">
+            <div class="movie">
+                <img [src]="imageBase+movie.poster_path" class="w-100" alt="">
+                <h3 class="h6">{{movie.title}}</h3>
+               </div>
+        </a>
+
+    </div>
+</div>
+<div class="d-flex justify-content-center">
+    <nav aria-label="Page navigation example ">
+        <ul class="pagination cursor-pointer ">
+          <li class="page-item "><a class="page-link bg-transparent text-white" >Previous</a></li>
+          <li *ngFor="let page of pages" (click)="getpage(page)" class="page-item"><a class="page-link bg-transparent text-white">{{page}}</a></li>
+          <li class="page-item"><a class="page-link bg-transparent text-white" >Next</a></li>
+        </ul>
+      </nav>
+</div>
+
+

@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap');
+
+body{
+    background-color: #131722 !important;
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: #fff !important;
+}
+.socialIcons li{
+    list-style-type: none;
+    padding: 0 5px;
+    
+}
+.socialIcons li:hover{
+    cursor: pointer;
+}
+.nav-item a{
+    color: #fff !important;
+}
+.navbar-brand{
+    color: #fff !important;
+}
+.navbar{
+    background-color:#1c2131d7 !important;
+    color: #fff !important;
+}
+.userRegist li{
+    list-style-type: none;
+    padding: 0 5px;
+}
+.beforeAfter{
+
+    position: relative;
+}
+.beforeAfter::before{
+    content: "";
+    width: 30%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.586) !important;
+    position: absolute;
+    top: 20%;
+    left: 4%;
+}
+
+.beforeAfter::after{
+    content: "";
+    width: 50%;
+    height: 1px;
+    background-color: rgba(187, 187, 187, 0.344) !important;
+    position: absolute;
+    bottom: 20%;
+    left: 4%;
+}
+.list-none{
+    list-style-type: none;
+}
+.list-none li{
+    padding: 10px 0px;
+    color: #949cb0;
+}
+
+.list-bgcolor{
+    background-color:#27a9d8;
+    border-radius: 5px;
+}
+.a-none ,.a-none:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.cursor-pointer li{
+    cursor: pointer;
+}
+.dropdown-menu li a
+{
+    color: black !important;
+}
+
+.dropdown-menu:hover li a
+{
+    color: black !important;
+}

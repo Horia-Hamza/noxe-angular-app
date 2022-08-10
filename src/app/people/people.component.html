@@ -1,0 +1,14 @@
+<div class="row pb-5">
+    <div class="beforeAfter col-md-4 movieTitle d-flex align-items-center">
+        <h2 >Trending <br> Stars <br> to watch now</h2>
+    </div>
+    <div *ngFor="let person of trendingPerson" class="col-md-2">
+       <div class="movie">
+        <img [src]="imageBase+person.profile_path" class="w-100" alt="">
+
+        <h3 class="h6">{{person.name}}</h3>
+
+
+       </div>
+    </div>
+</div>

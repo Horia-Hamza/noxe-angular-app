@@ -1,0 +1,29 @@
+
+<div class=" py-5">
+    <div  class="row">
+        <div  class="col-md-4">
+            <img [src]="imageBase+movieDetails.poster_path" class="w-100" alt="">
+        </div>
+        <div  class="col-md-8 ">
+            <div class="p-4">
+                <h2 class="h4">{{movieDetails.original_title}}</h2>
+                <div  class="py-2">
+                    <ul class="d-flex p-0">
+                        <li *ngFor="let detail of movieDetails.genres" class="me-2 p-1 list-none list-bgcolor">{{detail.name}}</li>  
+                    </ul>
+               </div>
+               <ul class="list-none p-0">
+                <li>popularity: {{movieDetails.popularity}}</li>
+                <li>vote Average: {{movieDetails.vote_average}}</li>
+                <li>vote Count: {{movieDetails.vote_count}}</li>
+                
+            </ul>
+                <p class="text-muted">{{movieDetails.overview}}</p>
+
+            </div>
+           
+
+        </div>
+    </div>
+</div>
+

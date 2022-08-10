@@ -1,0 +1,41 @@
+<div class="row py-5">
+    <div class="beforeAfter col-md-4 movieTitle d-flex align-items-center">
+        <h2 >Trending <br> Movies <br> to watch now</h2>
+    </div>
+    <div *ngFor="let movie of trendingMovies" class="col-md-2">
+        <a [routerLink]="['/movieDetails',movie.id]" class="a-none">
+            <div class="movie">
+                <img [src]="imageBase+movie.poster_path" class="w-100" alt="">
+                <h3 class="h6">{{movie.title}}</h3>
+               </div>
+        </a>
+
+    </div>
+</div>
+
+<div class="row pb-5">
+    <div class="beforeAfter col-md-4 movieTitle d-flex align-items-center">
+        <h2 >Trending <br> TV <br> to watch now</h2>
+    </div>
+    <div *ngFor="let tv of trendingTv" class="col-md-2">
+        <a [routerLink]="['/movieDetails',tv.id]" class="a-none">
+            <div class="movie">
+                <img [src]="imageBase+tv.poster_path" class="w-100" alt="">
+                <h3 class="h6">{{tv.name}}</h3>
+               </div>
+        </a>
+
+    </div>
+</div>
+
+<div class="row pb-5">
+    <div class="beforeAfter col-md-4 movieTitle d-flex align-items-center">
+        <h2 >Trending <br> Stars <br> to watch now</h2>
+    </div>
+    <div *ngFor="let person of trendingPerson" class="col-md-2">
+       <div class="movie">
+        <img [src]="imageBase+person.profile_path" class="w-100" alt="">
+        <h3 class="h6">{{person.name}}</h3>
+       </div>
+    </div>
+</div>

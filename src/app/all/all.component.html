@@ -1,0 +1,14 @@
+<div class="row py-5">
+    <div class="beforeAfter col-md-4 movieTitle d-flex align-items-center">
+        <h2 >All <br> Trending <br> to watch now</h2>
+    </div>
+    <div *ngFor="let all of allMovies" class="col-md-2">
+        <a [routerLink]="['/movieDetails',all.id]" class="a-none">
+            <div class="movie">
+                <img [src]="imageBase+all.poster_path" class="w-100" alt="">
+                <h3 class="h6">{{all.title}}</h3>
+               </div>
+        </a>
+
+    </div>
+</div>

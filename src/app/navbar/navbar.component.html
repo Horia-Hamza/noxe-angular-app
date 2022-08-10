@@ -1,0 +1,90 @@
+<nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+      <!-- logo -->
+      <a class="navbar-brand" routerLink="home">Noxe</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- logo end -->
+      <!-- menu -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a *ngIf="isLogin" class="nav-link active" aria-current="page" routerLink="home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a *ngIf="isLogin" class="nav-link active" aria-current="page" routerLink="movies">Movies</a>
+          </li>
+          <li class="nav-item">
+            <a *ngIf="isLogin" class="nav-link active" aria-current="page" routerLink="tv">Tv Shows</a>
+          </li>
+          <li class="nav-item">
+            <a *ngIf="isLogin" class="nav-link active" aria-current="page" routerLink="people">people</a>
+          </li>
+          <li class="nav-item">
+            <a *ngIf="isLogin" class="nav-link active" aria-current="page" routerLink="all">All</a>
+          </li>
+          <li class="nav-item">
+            <a *ngIf="isLogin" class="nav-link active" aria-current="page" routerLink="about">About</a>
+          </li>
+
+        </ul>
+      </div>
+      <!-- menu end -->
+      <!-- social icons -->
+      <div class="socialIcons d-flex me-5">
+        <ul  class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <i class="fa-brands fa-facebook"></i>
+          </li>
+          <li class="nav-item">
+            <i class="fa-brands fa-spotify"></i>             
+         </li>
+          <li class="nav-item">
+            <i class="fa-brands fa-instagram"></i>
+          </li>
+          <li class="nav-item">
+            <i class="fa-brands fa-youtube"></i>
+          </li>
+        </ul>
+
+      </div>
+      <!-- icons end -->
+
+      <div class="userRegist d-flex justify-content-center align-items-center">
+        <span *ngIf="isLogin">Hello: {{userInfo.getValue().first_name}} </span>
+
+<li class="nav-item dropdown ps-3">
+          <a *ngIf="isLogin" class="nav-link dropdown-toggle" routerLink="settings" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            settings
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item " routerLink="settings/privacy">Action</a></li>
+
+          </ul>
+        </li>
+
+
+        
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+           <!-- hello user -->
+          <!-- <li class="nav-item  pt-2">
+            <span *ngIf="isLogin">Hello: {{userInfo.getValue().first_name}} </span>
+          </li> -->
+          <!-- hello user end -->
+
+          <li class="nav-item ">
+            <a *ngIf="!isLogin" class="nav-link active" aria-current="page" routerLink="register">Register</a>
+          </li>
+          <li class="nav-item">
+            <a *ngIf="!isLogin" class="nav-link active" aria-current="page" routerLink="login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a (click)="logOut()" *ngIf="isLogin" class="nav-link active" aria-current="page" routerLink="login">Logout</a>
+          </li>
+        </ul>
+       
+    </div>
+    
+    </div>
+  </nav>
